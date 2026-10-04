@@ -1,0 +1,724 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+/* ===== Sticky Header ===== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    padding: 12px 20px;
+    transition: 0.3s ease;
+}
+
+/* Add soft shadow */
+.header.scrolled {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Container */
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    height: 45px;
+}
+
+/* ===== Center Menu ===== */
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Animated Underline */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #2e7d32;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ===== WhatsApp Circle ===== */
+.whatsapp a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: #25D366;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.whatsapp img {
+    height: 22px;
+}
+
+.whatsapp a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+
+
+/* ===== Banner Section ===== */
+.banner {
+    background: linear-gradient(to right, #ffffff, #e8f5e9);
+    padding: 60px 20px;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* ===== Left Content ===== */
+.banner-content {
+    flex: 1;
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.banner-content h1 span {
+    color: #2e7d32;
+}
+
+.banner-content p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ===== Button ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1b5e20;
+}
+
+/* ===== Right Image ===== */
+.banner-image {
+    flex: 1;
+    text-align: center;
+}
+
+.banner-image img {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* ===== Products Section ===== */
+.products {
+    padding: 80px 20px;
+    background-color: #f7fbf8;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Title */
+.products .section-title h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.products .section-title p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Card */
+.product-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Button */
+.product-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #2e7d32;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.product-btn:hover {
+    background-color: #1b5e20;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products .section-title h2 {
+        font-size: 24px;
+    }
+}
+
+/* ===== About Section ===== */
+.about {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* ===== About Content ===== */
+.about-content {
+    flex: 1;
+}
+
+.about-content h1 {
+    font-size: 34px;
+    color: #1b5e20;
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    font-size: 22px;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-content .highlight {
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+/* ===== About Image ===== */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content h1 {
+        font-size: 26px;
+    }
+
+    .about-content h2 {
+        font-size: 18px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+    }
+
+    .about-image img {
+        margin-top: 25px;
+        max-width: 300px;
+    }
+}
+
+/* ===== Features Section ===== */
+.features {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f1f8f4, #ffffff);
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* ===== Grid ===== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ===== Feature Card ===== */
+.feature-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .section-title p {
+        font-size: 15px;
+    }
+}
+
+.how-it-works {
+    padding: 60px 20px;
+    background: #f4fbf6;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 540px));
+    justify-content: center;
+    gap: 40px;
+}
+
+.video-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.video-box video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video-box h3 {
+    margin-top: 15px;
+    color: #2e7d32;
+}
+
+.video-box p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+.video-box:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+/* Mobile */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Video Section ===== */
+.video-section {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #ffffff, #e8f5e9);
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Title */
+.video-title h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.video-title p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Responsive Video */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .video-title h2 {
+        font-size: 24px;
+    }
+
+    .video-title p {
+        font-size: 15px;
+    }
+}
+/* ===== FAQ Section ===== */
+.faq-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-title h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.faq-title p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* FAQ Item */
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.faq-item input {
+    display: none;
+}
+
+/* Question */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+.faq-question span {
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+/* Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+    padding-bottom: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Toggle Effect */
+.faq-item input:checked ~ .faq-answer {
+    max-height: 200px;
+}
+
+.faq-item input:checked + .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .faq-title h2 {
+        font-size: 24px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+}
+/* ===== Footer ===== */
+.footer {
+    background: linear-gradient(to right, #1a1a1a, #222);
+    color: #fff;
+    padding: 60px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* Column */
+.footer-column input {
+    display: none;
+}
+
+/* Heading */
+.footer-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+    cursor: default;
+}
+
+/* Content */
+.footer-content p {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ===== Mobile Accordion ===== */
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-heading {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .footer-heading::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+    .footer-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .footer-column input:checked ~ .footer-content {
+        max-height: 200px;
+    }
+
+    .footer-column input:checked + .footer-heading::after {
+        transform: rotate(45deg);
+    }
+}
+
+
+/* WhatsApp Floating Icon */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.whatsapp:hover {
+    background-color: #1ebc59;
+}
